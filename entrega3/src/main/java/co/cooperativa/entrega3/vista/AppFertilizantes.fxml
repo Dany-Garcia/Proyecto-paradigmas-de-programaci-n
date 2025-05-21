@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.cooperativa.entrega3.controlador.ControladorFormulario">
+   <children>
+      <Label alignment="CENTER" layoutX="23.0" layoutY="24.0" text="GESTIÓN FERTILIZANTES">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSerial" layoutX="18.0" layoutY="103.0" text="Serial:" />
+      <Label fx:id="lblNombre" layoutX="152.0" layoutY="102.0" text="Nombre:" />
+      <Label fx:id="lblPrecio" layoutX="18.0" layoutY="143.0" text="Precio:" />
+      <TextField fx:id="txtCntDisponible" layoutX="482.0" layoutY="138.0" prefHeight="26.0" prefWidth="62.0" promptText="Ej: 80.7" />
+      <Label fx:id="lblCntDisponible" layoutX="352.0" layoutY="143.0" text="Cantidad disponible:" />
+      <TextField fx:id="txtNombre" layoutX="223.0" layoutY="98.0" prefHeight="26.0" prefWidth="109.0" promptText="Ej: F Orgánico" />
+      <Button fx:id="bttCreate" alignment="CENTER" layoutX="78.0" layoutY="399.0" mnemonicParsing="false" onAction="#create" prefHeight="18.0" prefWidth="138.0" text="Crear fertilizante" />
+      <Button fx:id="bttSerializar" layoutX="375.0" layoutY="456.0" mnemonicParsing="false" onAction="#serializar" prefHeight="26.0" prefWidth="84.0" text="Guardar" />
+      <Button fx:id="bttDeserealizar" layoutX="485.0" layoutY="455.0" mnemonicParsing="false" onAction="#deserializar" prefHeight="26.0" prefWidth="84.0" text="Recuperar" />
+      <TextField fx:id="txtSerial" layoutX="68.0" layoutY="97.0" prefHeight="26.0" prefWidth="70.0" promptText="Ej: 111" />
+      <Label fx:id="lblTipo" layoutX="350.0" layoutY="102.0" text="Tipo:" />
+      <TextField fx:id="txtTipo" layoutX="394.0" layoutY="98.0" prefHeight="26.0" prefWidth="150.0" promptText="Ej: Verde" />
+      <TextField fx:id="txtPrecio" layoutX="68.0" layoutY="138.0" prefHeight="26.0" prefWidth="69.0" promptText="Ej: 75.000" />
+      <Label fx:id="lblFechaAdquisicion" layoutX="152.0" layoutY="143.0" text="Fecha adquisición:" />
+      <TextField fx:id="txtFechaAdquisicion" layoutX="262.0" layoutY="138.0" prefHeight="26.0" prefWidth="70.0" promptText="Ej: 30 ABR " />
+      <Label fx:id="lblRgtTrazabilidad" layoutX="17.0" layoutY="219.0" text="Registro trazabilidad:" />
+      <CheckBox fx:id="chkboxRetrospectiva" layoutX="154.0" layoutY="218.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="112.0" text="Retrospectiva" />
+      <CheckBox fx:id="chkboxInterna" layoutX="293.0" layoutY="218.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="114.0" text="Interna" />
+      <CheckBox fx:id="chkboxProspectiva" layoutX="383.0" layoutY="217.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="97.0" text="Prospectiva" />
+      <Label fx:id="lblProveedor" layoutX="152.0" layoutY="182.0" text="Proveedor:" />
+      <ComboBox fx:id="comboProveedor" layoutX="233.0" layoutY="178.0" onAction="#onTipoProveedorSeleccionado" prefWidth="150.0" promptText="Tipo" />
+      <ComboBox fx:id="comboCertificado" layoutX="482.0" layoutY="178.0" onAction="#onCertificadoSeleccionado" prefWidth="150.0" promptText="certificado" visible="false" />
+      <Button fx:id="btDelete" layoutX="431.0" layoutY="398.0" mnemonicParsing="false" onAction="#delete" prefHeight="26.0" prefWidth="138.0" text="Eliminar fertilizante" />
+      <Button fx:id="bttUpdate" layoutX="253.0" layoutY="398.0" mnemonicParsing="false" onAction="#update" prefHeight="26.0" prefWidth="138.0" text="Modificar fertilizante" />
+      <TableView fx:id="tblView" layoutX="21.0" layoutY="259.0" prefHeight="124.0" prefWidth="606.0">
+         <columns>
+            <TableColumn fx:id="column1" prefWidth="75.0" text="Serial" />
+            <TableColumn fx:id="column2" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="column3" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="column4" prefWidth="75.0" text="Precio" />
+            <TableColumn fx:id="column5" prefWidth="75.0" text="Fecha adquisición" />
+            <TableColumn fx:id="column6" prefWidth="75.0" text="CntDisponible" />
+            <TableColumn fx:id="column7" prefWidth="75.0" text="Cliente" />
+            <TableColumn fx:id="column8" prefWidth="75.0" text="Proveedor" />
+            <TableColumn fx:id="column9" prefWidth="75.0" text="Registro Trazabilidad" />
+         </columns>
+      </TableView>
+      <CheckBox fx:id="chkboxCliente" layoutX="23.0" layoutY="182.0" mnemonicParsing="false" text="Cliente" />
+      <Button fx:id="bttRead" layoutX="29.0" layoutY="456.0" mnemonicParsing="false" onAction="#read" text="Buscar" />
+      <TextField fx:id="txtBuscador" layoutX="109.0" layoutY="456.0" prefHeight="26.0" prefWidth="222.0" promptText="Buscar fertilizante por su serial..." />
+   </children>
+</AnchorPane>

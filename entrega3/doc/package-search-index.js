@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"co.cooperativa.entrega3.controlador"},{"l":"co.cooperativa.entrega3.modelo"},{"l":"co.cooperativa.entrega3.servicios"},{"l":"co.cooperativa.entrega3.vista"}];updateSearchResults();
